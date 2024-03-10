@@ -1,0 +1,108 @@
+header > h1 {
+  text-align: center;
+}
+
+h2,
+h3 {
+  font-weight: normal;
+}
+
+.main-container {
+  display: flex;
+}
+
+.form-container,
+.result-container {
+  width: 100%;
+}
+
+button {
+  border: 0px;
+  height: 32px;
+  padding-right: 24px;
+  padding-left: 24px;
+  border-radius: 8px;
+}
+
+button:hover {
+  background-color: skyblue;
+  transition: 0.1s ease-in-out;
+  transition-delay: 0.1s;
+  color: black;
+}
+
+/* for form sides */
+.form-container {
+  border-right: 1px solid;
+  padding: 40px;
+}
+.form-container > h2 {
+  padding-left: 8px;
+  margin-bottom: 2px;
+}
+.top-container-form > div {
+  padding: 8px;
+  background-color: aliceblue;
+}
+.fp1-container,
+.fp2-container,
+.fp3-container {
+  text-align: justify;
+}
+
+#fb1-container {
+  background-color: coral;
+  color: white;
+}
+#fb1-container:hover {
+  background-color: skyblue;
+  transition: 0.1s ease-in-out;
+  transition-delay: 0.1s;
+  color: black;
+}
+
+/* for result sides */
+
+.result-container {
+  padding: 40px;
+}
+
+.result-container > h2 {
+  padding-left: 8px;
+}
+
+.top-container-result {
+  text-align: center;
+  background-color: aliceblue;
+  padding-top: 1px;
+  padding-bottom: 12px;
+}
+
+.rb-container {
+  text-align: center;
+  display: flex;
+}
+
+.bottom-container-result {
+  text-align: center;
+  background-color: aliceblue;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.rp2-container {
+  text-align: justify;
+}
+
+.rb1-container,
+.rb2-container {
+  margin-right: 20px;
+  background-color: coral;
+  color: white;
+}
+
+.rb3-container,
+.rb4-container {
+  background-color: coral;
+  color: white;
+}
