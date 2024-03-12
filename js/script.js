@@ -1,23 +1,47 @@
-// PERHITUNGAN BMI START
-let beratBadan;
-let tinggiBadan;
+var tinggi, berat, bmi, kategori, tinggiMeter, penjelasan1, penjelasan2;
 const keterangan = [
-  "Kamu kekurangan berat badan",
-  "Berat badan kamu ideal",
-  "Berat badan kamu berlebih",
-  "Obesitas",
+  "Kakak termasuk ke dalam kategori Terlalu Kurus:(",
+  "Kakak termasuk ke dalam kategori Ideall!",
+  "Kakak termasuk ke dalam kategori Berat Badan berlebih",
+  "Wah.. berat badan kakak terlalu berlebih",
 ];
-perhitunganBMI = (beratBadan, tinggiBadan) => {
-  let konverterTinggiBadan = tinggiBadan / 100;
-  var hasil = beratBadan / konverterTinggiBadan ** 2;
-  if (hasil < 18.5) {
-    return `Hasilnya adalah ${hasil}, itu artinya ${keterangan[0]}`;
-  } else if (hasil >= 18.5 && hasil < 24.9) {
-    return `Hasilnya adalah ${hasil}, itu artinya ${keterangan[1]}`;
-  } else if (hasil > 24.9 && hasil < 29.9) {
-    return `Hasilnya adalah ${hasil}, itu artinya ${keterangan[2]}`;
+
+const saran = [
+  "Kalau kakak berada di dalam kategori ini, kakak perlu menambah makan kakak dan atur pola olahraga kakak",
+  "Kalau berat badan kakak sudah ideal, tetap konsumsi makanan bergizi dan jangan lupa olahraga",
+  "Rajin olahraga kak! semangat",
+  "Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalor makanan yang dikonsumsi dan olahraga",
+];
+// calculate button
+perhitunganBMI = () => {
+  tinggi = parseFloat(document.getElementById("tinggi").value);
+  tinggiMeter = tinggi / 100;
+  berat = parseFloat(document.getElementById("berat").value);
+  bmi = berat / tinggiMeter ** 2;
+  if (bmi < 18.5) {
+    kategori = keterangan[0];
+    penjelasan1 = saran[0];
+  } else if (bmi >= 18.5 && bmi < 24.9) {
+    kategori = keterangan[1];
+    penjelasan1 = saran[1];
+  } else if (bmi > 24.9 && bmi < 29.9) {
+    kategori = keterangan[2];
+    penjelasan1 = saran[2];
   } else {
-    return `Hasilnya adalah ${hasil}, itu artinya ${keterangan[3]}`;
+    kategori = keterangan[3];
+    penjelasan1 = saran[3];
   }
+
+  document.getElementById("bmi").innerHTML =
+    "Berat Badan kakak adalah " + bmi.toFixed(2);
+  document.getElementById("kategori").innerHTML = kategori;
+  document.getElementById("penjelasan1").innerHTML = penjelasan1;
 };
-// PERHITNGAN BMI END
+
+// reset button
+
+itungLagi = () => {
+  document.getElementById("bmi").innerHTML = "";
+  document.getElementById("kategori").innerHTML = "";
+  document.getElementById("penjelasan1").innerHTML = "";
+};

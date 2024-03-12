@@ -12,8 +12,7 @@
     </header>
     <main>
       <div class="main-container">
-
-<!-- For left side, weight form Start-->
+        <!-- For left side, weight form Start-->
 
         <section class="form-container">
           <h2>Kalkulator BMI</h2>
@@ -25,7 +24,7 @@
           </p>
           <section class="top-container-form">
             <div>
-             <label>Jenis Kelamin:</label><br/>
+              <label>Jenis Kelamin:</label><br />
               <input
                 type="radio"
                 id="laki-laki"
@@ -40,19 +39,19 @@
               /><label for="perempuan"> Perempuan</label>
             </div>
             <div>
-                <label>Berat Badan (kg)</label><br/>
-                <input type="number">
+              <label>Berat Badan (kg)</label><br />
+              <input type="number" id="berat" required="" />
             </div>
             <div>
-                <label>Usia (tahun)</label><br/>
-                <input type="number">
+              <label>Usia (tahun)</label><br />
+              <input type="number" />
             </div>
             <div>
-                <label>Tinggi Badan (cm)</label><br/>
-                <input type="number">
+              <label>Tinggi Badan (cm)</label><br />
+              <input type="number" id="tinggi" required="" />
             </div>
-            <button type="button" id="fb1-container">Hitung BMI</button>
-            <button type="button" id="fb2-container">Reset</button>
+            <button onclick="perhitunganBMI()">Hitung BMI</button>
+            <button onclick="itungLagi()">Reset</button>
           </section>
           <h3>Keunggulan fitur</h3>
           <ol>
@@ -72,32 +71,29 @@
             tinggi badan anda (dalam centi meter) atau BMI = kg/m^2
           </p>
         </section>
-<!-- For left side, wight for end -->
+        <!-- For left side, wight for end -->
 
-
-<!-- For right side result -->
+        <!-- For right side result -->
 
         <section class="result-container">
           <h2 class="h2-result-container">Hasil</h2>
           <div class="top-container-result">
-            <h4>Berat badan anda ...</h4>
-            <h1 id="weight1-result">65</h1>
-            <h4 id="weight2-result">Anda memiliki berat badan ...</h4>
-            <button type="button">Download Hasil BMI</button>
+            <h1 id="bmi"></h1>
+            <h2 id="kategori"></h2>
           </div>
-          <h3>Hasil BMI ...</h3>
-          <p class="rp2-container">Anda memiliki berat badan ...</p>
-          <p class="rp2-container">Cara terbaik untuk...</p>
-          <p class="rp2-container">
-            Jika BMI anda berada dalam kategori ini, anda dianjurkan untuk ...
-          </p>
+          <h3></h3>
+          <div class="rp2-container">
+            <p id="penjelasan1"></p>
+            <p id="penjelasan2"></p>
+          </div>
+
           <div class="rb-container">
             <button type="button" class="rb1-container">
-                Konsultasi Ahli via Aplikasi
-              </button>
-              <button type="button" class="rb2-container">
-                Registasi Ahli Gizi
-              </button>
+              Konsultasi Ahli via Aplikasi
+            </button>
+            <button type="button" class="rb2-container">
+              Registasi Ahli Gizi
+            </button>
           </div>
           <p class="rp2-container">
             BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan
@@ -105,13 +101,13 @@
             lanjut mengenai resiko dan kekhawatiran anda terkait dengan berat
             bada anda.
           </p>
-          <section>
+          <!-- <section>
             <section class="bottom-container-result">
               <h4>Beberapa penyakit yang berasal dari ...</h4>
               <h1 id="weight1-result">Ambeyen</h1>
               <button type="button" class="rb3-container">Konsultasi dokter via aplikasi</button>
               <button type="button" class="rb4-container">Registrasi Online Sekarang</button>
-          </section>
+          </section> -->
         </section>
       </div>
     </main>
